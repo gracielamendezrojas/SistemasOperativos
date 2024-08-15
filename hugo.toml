@@ -1,0 +1,14 @@
+# Theme config. Your config (yoursite/hugo.toml) overrides this one.
+theme = "quint"
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Documentación para la Virtualización'
+
+paginate = 4                        # Number of posts to show on a list page
+summaryLength = 20                  # Number of characters in your card summaries
+
+[params]
+css = ["css/custom.css"]            # Your custom CSS overrides, stored in yoursite/static/
+numImages = 10                      # Number of random images to choose from for banners (in themes/quint/static/images)
+
+
