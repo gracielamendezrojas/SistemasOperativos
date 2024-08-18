@@ -29,6 +29,14 @@
         <p></p>
     </section>
     <main>
+        <form id="search"
+    action='http://localhost:1313/search/' method="get" class="form-inline">
+    <label hidden for="search-input">Search site</label>
+    <input type="text" id="search-input" name="query"
+    placeholder="Type here to search">
+    <button type="submit" value="search">Search</button>
+</form>
+
         
         
         <div class="blog-cards">
@@ -36,7 +44,7 @@
         <div class="card">
             <a href="http://localhost:1313/post/ca/">
                 
-                    <img src="/images/" alt="Documentación para la Virtualización">
+                    <img src="/images/CA.jpg" alt="Documentación para la Virtualización">
                 
                 <div class="text">
                     <h2>Certificate Authority</h2>
@@ -49,7 +57,7 @@
         <div class="card">
             <a href="http://localhost:1313/post/web_server/">
                 
-                    <img src="/images/" alt="Documentación para la Virtualización">
+                    <img src="/images/web.jpg" alt="Documentación para la Virtualización">
                 
                 <div class="text">
                     <h2>Web server</h2>
@@ -62,7 +70,7 @@
         <div class="card">
             <a href="http://localhost:1313/post/dfs/">
                 
-                    <img src="/images/" alt="Documentación para la Virtualización">
+                    <img src="/images/DFS.jpg" alt="Documentación para la Virtualización">
                 
                 <div class="text">
                     <h2>Distributed File System (DFS)</h2>
@@ -75,7 +83,7 @@
         <div class="card">
             <a href="http://localhost:1313/post/fsrm/">
                 
-                    <img src="/images/" alt="Documentación para la Virtualización">
+                    <img src="/images/FSRM.jpg" alt="Documentación para la Virtualización">
                 
                 <div class="text">
                     <h2>File Server Resource Manager (FSRM)</h2>
@@ -110,6 +118,7 @@
             </div>
         
     </main>
+    
 <footer>
     <div class="social-media">
         
@@ -186,7 +195,7 @@
         
         "title": "Carpetas compartidas",
             "tags": [],
-    "content": "", 
+    "content": "Carpetas Compartidas Las carpetas compartidas son directorios disponibles en una red, lo que permite el acceso a las carpetas desde diversos dispositivos. Es común que existan carpetas compartidas para el uso de diversos usuarios o departamentos. A continuación se muestra una tabla con las carpetas compartidas y el tipo de permisos asignados a cada departamento.\nCarpetas compartidas de los departamentos y especificación de los permisos Carpeta Compartida Permiso Ventas El departamento de ventas tiene permiso de lectura y escritura. Contabilidad El departamento de contabilidad tiene permiso de lectura y escritura. RH El departamento de recursos humanos tiene permiso de lectura y escritura. TI El departamento de tecnologías de información tiene permiso de lectura y escritura. Gerencia El departamento de gerencia tiene permiso de lectura y escritura. Pública Todos los departamentos tienen permiso de lectura y solamente TI tiene permiso de escritura. Previo a compartir las carpetas, se instaló el rol de servidor de archivos (File Server Role) en Windows Server, el cual es esencial para una gestión efectiva y avanzada de archivos en una red.\nComando para instalar el servidor de archivos:\nInstall-WindowsFeature -Name FS-FileServer En esta sección se muestran los pasos realizados para cumplir con los diversos requerimientos solicitados referentes a las carpetas compartidas.\nCarpetas Compartidas Creadas en el Disco D: Cambio del Tamaño de la Partición del Disco: Para la práctica realizada, el tamaño del disco C consumía todo el espacio de la memoria del disco duro. Por lo tanto, fue necesario reducir el tamaño del disco con el comando:\nResize-Partition -DiskNumber 0 -PartitionNumber 3 -Size 29GB Creación del Disco D: El comando utilizado para la creación del disco D fue el siguiente:\nNew-Partition –DiskNumber 0 -Size 20GB -DriveLetter D Formatear el Disco D: Para el uso del disco D, primero debe ser formateado.\nFormatear disco local:\nCompartir la Carpeta y Selección de Permisos:\nRuta para compartir la carpeta: Click derecho sobre la carpeta -\u0026gt; Properties -\u0026gt; Share -\u0026gt; Digitar el grupo -\u0026gt; Add. Compartir carpetas:\nAjuste de Permisos de las Carpetas Compartidas: Una vez que se haya seleccionado el grupo con el que se desea compartir en la sección de permisos, se puede elegir entre las opciones disponibles.\nAjuste de permisos en carpetas:\nCarpeta compartida:\n", 
     "url": "http:\/\/localhost:1313\/post\/shared_files\/"
         },
     
@@ -195,7 +204,7 @@
         
         "title": "Políticas de grupo",
             "tags": [],
-    "content": "", 
+    "content": "Implementación de Políticas de Grupo Dado que la empresa no tiene experiencia en la creación de políticas de grupo, se solicitaron las siguientes políticas para su implementación:\nCambiar el fondo de pantalla a uno corporativo (archivo compartido en el servidor denominado FondoEmpresarial.jpg). Deshabilitar el acceso al Panel de Control para usuarios que no pertenecen al departamento de TI. Definir una página inicial específica para Internet Explorer. Deshabilitar la ejecución de ciertos ejecutables: notepad.exe y regedit.exe. Mapear un recurso de red usando DFS para uso personal, asignando la unidad P: a cada usuario de dominio y accediendo a la carpeta personal mediante una ruta DFS. Renombrar los usuarios locales: cambiar el nombre del administrador local a usrmda y el nombre del usuario invitado local a usrtmp en las estaciones. Configurar la redirección de carpetas para los usuarios del dominio a una carpeta de red. A continuación se detalla cómo se configuraron estas políticas y sus resultados:\n1. Cambiar Fondo de Pantalla Configuración del Archivo de Fondo de Pantalla:\nSe creó una carpeta compartida en el servidor llamada “Fondo de Pantalla Empresarial”, accesible para todos los usuarios autenticados. Dentro de esta carpeta se encuentra el archivo FondoEmpresarial.jpg. Archivo de Fondo de Pantalla Empresarial en la Carpeta\nConfiguración de la Política de Grupo:\nSe creó una nueva política de grupo llamada “Fondo de Pantalla”. Se configuró para que utilice la dirección de la carpeta y el archivo FondoEmpresarial.jpg como fondo de pantalla para todos los usuarios. Ubicación de la Configuración de la Política de Grupo\nDefinición de Carpeta y Archivo del Fondo de Pantalla\n2. Deshabilitar Acceso al Panel de Control y Ejecutables Deshabilitar el Acceso al Panel de Control:\nSe creó una política de grupo para deshabilitar el acceso al Panel de Control para usuarios no pertenecientes al grupo de TI. Activación de la Política de Grupo\nExclusión de Usuarios del Grupo de TI\nDeshabilitar Ejecutables:\nPara bloquear la ejecución de notepad.exe y regedit.exe, se configuró la política de grupo correspondiente. Ubicación de la Configuración de la Política de Grupo\nEspecificación de los Programas Deshabilitados\nDefinir Página de Inicio en Internet Explorer: Se estableció una página web específica para que se cargue al iniciar Internet Explorer. Definición de Página Web por Defecto\n3. Renombrar Usuarios Locales Renombramiento del Usuario Administrador Local:\nEl nombre del usuario administrador local se cambió a usrmda. Renombramiento del Administrador Local\nConfirmación de Renombramiento\n4. Redirección de Carpetas Configuración de la Redirección de Carpetas:\nSe configuró la política de grupo para redirigir las carpetas de los usuarios del dominio a una carpeta de red específica. Definición de Ruta para Redirección de Carpetas\nConfiguración de las Propiedades de los Documentos\nConfirmación de Redirección de Carpeta\n5. Restricción de Archivos Restricción de Copia de Archivos:\nSe implementó una política para prevenir la copia de archivos con extensiones .MP3 y .AVI a las carpetas de la empresa. Configuración de Restricción de Archivos\n", 
     "url": "http:\/\/localhost:1313\/post\/group_policies\/"
         },
     
@@ -204,7 +213,7 @@
         
         "title": "Creación de usuarios y grupos",
             "tags": [],
-    "content": "", 
+    "content": "Creación de Usuarios y Grupos Para gestionar usuarios y grupos en el servidor, sigue estos pasos:\nCreación de Usuarios Accede a la Herramienta de Administración:\nVe a Tools -\u0026gt; Server Manager y selecciona Active Directory Users and Computers. Crear un Nuevo Usuario:\nNavega alcontenedor donde deseas crear el usuario. Haz clic derecho y selecciona New -\u0026gt; User. Completa los campos requeridos: First Name: Nombre del usuario. Last Name: Apellido del usuario. User logon name: Nombre para iniciar sesión. Password: Contraseña del usuario. Creación de Usuario\nCreación de Grupos Accede a la Herramienta de Administración:\nVe a Tools -\u0026gt; Server Manager y selecciona Active Directory Users and Computers. Crear un Nuevo Grupo:\nNavega a contenedor donde deseas crear el grupo. Haz clic derecho y selecciona New -\u0026gt; Group. Especifica el Group Name (Nombre del grupo) correspondiente al departamento. Asociación de Usuarios a un Grupo Seleccionar el Grupo:\nHaz clic derecho sobre el grupo al que deseas agregar usuarios y selecciona Properties. Agregar Miembros:\nNavega a la pestaña Members y haz clic en Add. En la ventana de selección, ingresa los nombres de los usuarios deseados y haz clic en Check Names para verificar. Haz clic en OK para completar la asociación. Asociación de Usuario a un Grupo\n", 
     "url": "http:\/\/localhost:1313\/post\/users_and_groups\/"
         },
     
@@ -213,7 +222,7 @@
         
         "title": "Unión de cliente al dominio",
             "tags": [],
-    "content": "", 
+    "content": "Unión de Cliente al Dominio Para asegurar que el cliente esté correctamente unido al dominio, sigue estos pasos:\nVerifica el Estado del Cliente en el Dominio:\nAsegúrate de que el cliente esté correctamente integrado al dominio. Resumen del Estado del Cliente\nPrueba de Conexión del Cliente:\nAbre Command Prompt para obtener un resumen completo de la configuración de red y comprobar la conexión. Este comando proporciona detalles importantes sobre la configuración IP del cliente, incluyendo la dirección IP, la puerta de enlace predeterminada y los servidores DNS. Prueba de Conexión\n", 
     "url": "http:\/\/localhost:1313\/post\/client_domain\/"
         },
     
@@ -222,7 +231,7 @@
         
         "title": "Dynamic Host Configuration Protocol (DHCP)",
             "tags": [],
-    "content": "", 
+    "content": "Instructivo para la Configuración de DHCP El Dynamic Host Configuration Protocol (DHCP) es un protocolo de red que automatiza la asignación de direcciones IP y otros parámetros de configuración a dispositivos en una red. Esto facilita la administración de la red y reduce errores asociados con la configuración manual.\nBeneficios del DHCP El uso de DHCP ofrece varios beneficios clave:\nReducción de Errores de Configuración: Minimiza errores causados por la configuración manual, como errores tipográficos o conflictos de direcciones IP. Configuración Centralizada y Automatizada: Permite definir y gestionar configuraciones TCP/IP desde una ubicación central. Asignación de Intervalo Completo de Direcciones: Facilita la asignación de un rango completo de direcciones IP a los dispositivos. Control Eficaz de Cambios de IP: Administra de manera eficiente las actualizaciones frecuentes de direcciones IP para los clientes. Reutilización de Direcciones IP: Optimiza el uso de direcciones IP al reutilizar aquellas de dispositivos que salen de la red. Procedimiento de Configuración A continuación, se detalla el procedimiento para configurar DHCP. Las siguientes figuras ilustran cada paso del proceso:\nPaso 1: Configuración Inicial\nConfiguración DHCP paso a paso:\nVerificación de la Instalación Una vez completada la instalación, ejecuta los comandos en PowerShell para verificar el estado del servidor DHCP. El resumen del sistema debe mostrar los grupos de seguridad y el estado de autorización del servidor DHCP como \u0026ldquo;done\u0026rdquo;.\nResumen del estado del DHCP:\n", 
     "url": "http:\/\/localhost:1313\/post\/dhcp\/"
         },
     
@@ -231,7 +240,7 @@
         
         "title": "Active directory and DNS",
             "tags": [],
-    "content": "", 
+    "content": "Guía de Configuración: Active Directory Domain Services y DNS Active Directory Domain Services (AD DS) y DNS (Domain Name System) son componentes clave en la gestión de redes. Ambos trabajan en conjunto para facilitar la organización y el acceso a los recursos de red.\nActive Directory Domain Services utiliza DNS para permitir que los clientes localicen y se comuniquen con los controladores de dominio (Iainfoulds, 2023). DNS simplifica las búsquedas al reemplazar las direcciones IP numéricas por nombres de dominio legibles. DNS (Domain Name System) Características Clave Sistema de Nomenclatura: Convierte nombres de dominio legibles para los humanos en direcciones IP comprensibles por las computadoras. Estructura Jerárquica: Organiza los nombres de dominio en una estructura jerárquica y distribuida. Integración con DHCP: Se puede integrar con el Protocolo de Configuración Dinámica de Host (DHCP) para una gestión más fluida de direcciones IP. Redundancia: Permite la configuración de múltiples servidores DNS y la propagación de registros en diferentes ubicaciones. Active Directory Domain Services (AD DS) Características Clave Gestión de Recursos: Facilita la gestión de recursos de red como archivos, usuarios, grupos y dispositivos. Protocolo LDAP: Utiliza el Protocolo Ligero de Acceso a Directorios (LDAP) para autenticación y gestión de datos. Almacenamiento y Autorización: Almacena datos en el directorio y autoriza a los usuarios para acceder a ellos. Comunicación de Aplicaciones: Ofrece un lenguaje que las aplicaciones necesitan para comunicarse con los servicios de directorio. Autenticación y Autorización: Verifica la identidad de usuarios y dispositivos, y determina los permisos y niveles de acceso. Gestión Centralizada: Administra cuentas de usuario, contraseñas y políticas de seguridad de forma centralizada. Políticas de Grupo: Implementa configuraciones y restricciones en múltiples dispositivos y usuarios simultáneamente. Estructura Jerárquica: Organiza los recursos en un árbol jerárquico de dominios, unidades organizativas (OU) y objetos. Configuración en Windows Server Instalación de Servicios:\nAbre Server Manager. Selecciona \u0026ldquo;Add Roles and Features\u0026rdquo; y sigue el procedimiento para instalar Active Directory Domain Services y DNS. Instalación de Active Directory y DNS: Selección de características AD DS: Selección de características DNS: Promoción a Domain Controller:\nUna vez instalados AD DS y DNS, promueve el servidor a Domain Controller presionando el botón correspondiente. Promoción del servidor a Domain Controller: Finalización del proceso de instalación: Ingreso de credenciales como Administrador: Razones para promover el servidor a Domain Controller:\nAutenticación Centralizada: Permite iniciar sesión una sola vez y acceder a múltiples recursos. Autenticación de Usuarios: Verifica a los usuarios cuando intentan conectarse a la red. Gestión de Políticas de Grupo: Facilita la gestión de políticas de grupo. Almacenamiento de Datos: Los Domain Controllers (DC) almacenan y mantienen la base de datos de Active Directory. Configuración de DNS:\nEn el DNS Manager, configura dominios en la sección de Forward Lookup Zones. DNS Forward Lookup Zones:] Forward Lookup Zones incluyen:\nBase de Datos DNS: Contiene registros que asocian nombres de dominio con direcciones IP.\nTipos de Registros:\nA (Address): Dirección IPv4. AAAA (IPv6 Address): Dirección IPv6. CNAME (Canonical Name): Alias de un dominio. MX (Mail Exchange): Servidores de correo. SRV (Service): Controladores de dominio, servicios LDAP. TXT: Información textual como verificaciones SPF. Configura las Reverse Lookup Zones, que contienen registros PTR (Pointer) para asociar direcciones IP con nombres de dominio.\nDNS Reverse Lookup Zones: Funciones de las Reverse Lookup Zones:\nTraducción de IPs a Nombres: Principal función de búsqueda inversa. Verificación y Seguridad: Verifica la identidad de clientes antes de permitir el acceso. Registro y Auditoría: Utilizado para la auditoría y diagnóstico, por ejemplo, en servidores de correo. Pruebas de Conectividad:\nEjecuta nslookup en el símbolo del sistema para verificar la conectividad con varios dominios. Pruebas de conectividad: ", 
     "url": "http:\/\/localhost:1313\/post\/active_directory\/"
         },
     
@@ -287,6 +296,15 @@
             "tags": [],
     "content": "", 
     "url": "http:\/\/localhost:1313\/categories\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/search\/": {
+        
+        "title": "Searches",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/search\/"
         },
     
     

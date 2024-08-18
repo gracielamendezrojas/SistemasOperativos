@@ -5,6 +5,7 @@
         <p>{{ .Content }}</p>
     </section>
     <main>
+        {{ partial "search" . }}
         {{ $posts := where .Site.RegularPages "Section" "post" }}
         {{ $paginator := .Paginate ($posts) }}
         {{ partial "cards" . }}
@@ -29,4 +30,5 @@
             </div>
         {{ end }}
     </main>
+    
 {{end}}

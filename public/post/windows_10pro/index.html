@@ -100,21 +100,30 @@ Para verificar la conexión a Internet, se utiliza el símbolo del sistema con e
     window.store = {
     
     
-    "http:\/\/localhost:1313\/post\/ca\/": {
-        
-        "title": "Certificate Authority",
-            "tags": [],
-    "content": "", 
-    "url": "http:\/\/localhost:1313\/post\/ca\/"
-        },
-    
-    
     "http:\/\/localhost:1313\/": {
         
         "title": "Documentación para la Virtualización",
             "tags": [],
     "content": "", 
     "url": "http:\/\/localhost:1313\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/search\/": {
+        
+        "title": "Searches",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/search\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/ca\/": {
+        
+        "title": "Certificate Authority",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/ca\/"
         },
     
     
@@ -176,7 +185,7 @@ Para verificar la conexión a Internet, se utiliza el símbolo del sistema con e
         
         "title": "Creación de usuarios y grupos",
             "tags": [],
-    "content": "", 
+    "content": "Creación de Usuarios y Grupos Para gestionar usuarios y grupos en el servidor, sigue estos pasos:\nCreación de Usuarios Accede a la Herramienta de Administración:\nVe a Tools -\u0026gt; Server Manager y selecciona Active Directory Users and Computers. Crear un Nuevo Usuario:\nNavega alcontenedor donde deseas crear el usuario. Haz clic derecho y selecciona New -\u0026gt; User. Completa los campos requeridos: First Name: Nombre del usuario. Last Name: Apellido del usuario. User logon name: Nombre para iniciar sesión. Password: Contraseña del usuario. Creación de Usuario\nCreación de Grupos Accede a la Herramienta de Administración:\nVe a Tools -\u0026gt; Server Manager y selecciona Active Directory Users and Computers. Crear un Nuevo Grupo:\nNavega a contenedor donde deseas crear el grupo. Haz clic derecho y selecciona New -\u0026gt; Group. Especifica el Group Name (Nombre del grupo) correspondiente al departamento. Asociación de Usuarios a un Grupo Seleccionar el Grupo:\nHaz clic derecho sobre el grupo al que deseas agregar usuarios y selecciona Properties. Agregar Miembros:\nNavega a la pestaña Members y haz clic en Add. En la ventana de selección, ingresa los nombres de los usuarios deseados y haz clic en Check Names para verificar. Haz clic en OK para completar la asociación. Asociación de Usuario a un Grupo\n", 
     "url": "http:\/\/localhost:1313\/post\/users_and_groups\/"
         },
     
@@ -185,7 +194,7 @@ Para verificar la conexión a Internet, se utiliza el símbolo del sistema con e
         
         "title": "Unión de cliente al dominio",
             "tags": [],
-    "content": "", 
+    "content": "Unión de Cliente al Dominio Para asegurar que el cliente esté correctamente unido al dominio, sigue estos pasos:\nVerifica el Estado del Cliente en el Dominio:\nAsegúrate de que el cliente esté correctamente integrado al dominio. Resumen del Estado del Cliente\nPrueba de Conexión del Cliente:\nAbre Command Prompt para obtener un resumen completo de la configuración de red y comprobar la conexión. Este comando proporciona detalles importantes sobre la configuración IP del cliente, incluyendo la dirección IP, la puerta de enlace predeterminada y los servidores DNS. Prueba de Conexión\n", 
     "url": "http:\/\/localhost:1313\/post\/client_domain\/"
         },
     
@@ -194,7 +203,7 @@ Para verificar la conexión a Internet, se utiliza el símbolo del sistema con e
         
         "title": "Dynamic Host Configuration Protocol (DHCP)",
             "tags": [],
-    "content": "", 
+    "content": "Instructivo para la Configuración de DHCP El Dynamic Host Configuration Protocol (DHCP) es un protocolo de red que automatiza la asignación de direcciones IP y otros parámetros de configuración a dispositivos en una red. Esto facilita la administración de la red y reduce errores asociados con la configuración manual.\nBeneficios del DHCP El uso de DHCP ofrece varios beneficios clave:\nReducción de Errores de Configuración: Minimiza errores causados por la configuración manual, como errores tipográficos o conflictos de direcciones IP. Configuración Centralizada y Automatizada: Permite definir y gestionar configuraciones TCP/IP desde una ubicación central. Asignación de Intervalo Completo de Direcciones: Facilita la asignación de un rango completo de direcciones IP a los dispositivos. Control Eficaz de Cambios de IP: Administra de manera eficiente las actualizaciones frecuentes de direcciones IP para los clientes. Reutilización de Direcciones IP: Optimiza el uso de direcciones IP al reutilizar aquellas de dispositivos que salen de la red. Procedimiento de Configuración A continuación, se detalla el procedimiento para configurar DHCP. Las siguientes figuras ilustran cada paso del proceso:\nPaso 1: Configuración Inicial\nConfiguración DHCP paso a paso:\nVerificación de la Instalación Una vez completada la instalación, ejecuta los comandos en PowerShell para verificar el estado del servidor DHCP. El resumen del sistema debe mostrar los grupos de seguridad y el estado de autorización del servidor DHCP como \u0026ldquo;done\u0026rdquo;.\nResumen del estado del DHCP:\n", 
     "url": "http:\/\/localhost:1313\/post\/dhcp\/"
         },
     
@@ -203,7 +212,7 @@ Para verificar la conexión a Internet, se utiliza el símbolo del sistema con e
         
         "title": "Active directory and DNS",
             "tags": [],
-    "content": "", 
+    "content": "Guía de Configuración: Active Directory Domain Services y DNS Active Directory Domain Services (AD DS) y DNS (Domain Name System) son componentes clave en la gestión de redes. Ambos trabajan en conjunto para facilitar la organización y el acceso a los recursos de red.\nActive Directory Domain Services utiliza DNS para permitir que los clientes localicen y se comuniquen con los controladores de dominio (Iainfoulds, 2023). DNS simplifica las búsquedas al reemplazar las direcciones IP numéricas por nombres de dominio legibles. DNS (Domain Name System) Características Clave Sistema de Nomenclatura: Convierte nombres de dominio legibles para los humanos en direcciones IP comprensibles por las computadoras. Estructura Jerárquica: Organiza los nombres de dominio en una estructura jerárquica y distribuida. Integración con DHCP: Se puede integrar con el Protocolo de Configuración Dinámica de Host (DHCP) para una gestión más fluida de direcciones IP. Redundancia: Permite la configuración de múltiples servidores DNS y la propagación de registros en diferentes ubicaciones. Active Directory Domain Services (AD DS) Características Clave Gestión de Recursos: Facilita la gestión de recursos de red como archivos, usuarios, grupos y dispositivos. Protocolo LDAP: Utiliza el Protocolo Ligero de Acceso a Directorios (LDAP) para autenticación y gestión de datos. Almacenamiento y Autorización: Almacena datos en el directorio y autoriza a los usuarios para acceder a ellos. Comunicación de Aplicaciones: Ofrece un lenguaje que las aplicaciones necesitan para comunicarse con los servicios de directorio. Autenticación y Autorización: Verifica la identidad de usuarios y dispositivos, y determina los permisos y niveles de acceso. Gestión Centralizada: Administra cuentas de usuario, contraseñas y políticas de seguridad de forma centralizada. Políticas de Grupo: Implementa configuraciones y restricciones en múltiples dispositivos y usuarios simultáneamente. Estructura Jerárquica: Organiza los recursos en un árbol jerárquico de dominios, unidades organizativas (OU) y objetos. Configuración en Windows Server Instalación de Servicios:\nAbre Server Manager. Selecciona \u0026ldquo;Add Roles and Features\u0026rdquo; y sigue el procedimiento para instalar Active Directory Domain Services y DNS. Instalación de Active Directory y DNS: Selección de características AD DS: Selección de características DNS: Promoción a Domain Controller:\nUna vez instalados AD DS y DNS, promueve el servidor a Domain Controller presionando el botón correspondiente. Promoción del servidor a Domain Controller: Finalización del proceso de instalación: Ingreso de credenciales como Administrador: Razones para promover el servidor a Domain Controller:\nAutenticación Centralizada: Permite iniciar sesión una sola vez y acceder a múltiples recursos. Autenticación de Usuarios: Verifica a los usuarios cuando intentan conectarse a la red. Gestión de Políticas de Grupo: Facilita la gestión de políticas de grupo. Almacenamiento de Datos: Los Domain Controllers (DC) almacenan y mantienen la base de datos de Active Directory. Configuración de DNS:\nEn el DNS Manager, configura dominios en la sección de Forward Lookup Zones. DNS Forward Lookup Zones:] Forward Lookup Zones incluyen:\nBase de Datos DNS: Contiene registros que asocian nombres de dominio con direcciones IP.\nTipos de Registros:\nA (Address): Dirección IPv4. AAAA (IPv6 Address): Dirección IPv6. CNAME (Canonical Name): Alias de un dominio. MX (Mail Exchange): Servidores de correo. SRV (Service): Controladores de dominio, servicios LDAP. TXT: Información textual como verificaciones SPF. Configura las Reverse Lookup Zones, que contienen registros PTR (Pointer) para asociar direcciones IP con nombres de dominio.\nDNS Reverse Lookup Zones: Funciones de las Reverse Lookup Zones:\nTraducción de IPs a Nombres: Principal función de búsqueda inversa. Verificación y Seguridad: Verifica la identidad de clientes antes de permitir el acceso. Registro y Auditoría: Utilizado para la auditoría y diagnóstico, por ejemplo, en servidores de correo. Pruebas de Conectividad:\nEjecuta nslookup en el símbolo del sistema para verificar la conectividad con varios dominios. Pruebas de conectividad: ", 
     "url": "http:\/\/localhost:1313\/post\/active_directory\/"
         },
     

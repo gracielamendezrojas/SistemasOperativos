@@ -55,28 +55,28 @@
       <link>http://localhost:1313/post/users_and_groups/</link>
       <pubDate>Sun, 18 Aug 2024 11:19:04 -0600</pubDate>
       <guid>http://localhost:1313/post/users_and_groups/</guid>
-      <description></description>
+      <description>Creación de Usuarios y Grupos Para gestionar usuarios y grupos en el servidor, sigue estos pasos:&#xA;Creación de Usuarios Accede a la Herramienta de Administración:</description>
     </item>
     <item>
       <title>Unión de cliente al dominio</title>
       <link>http://localhost:1313/post/client_domain/</link>
       <pubDate>Sun, 18 Aug 2024 11:18:37 -0600</pubDate>
       <guid>http://localhost:1313/post/client_domain/</guid>
-      <description></description>
+      <description>Unión de Cliente al Dominio Para asegurar que el cliente esté correctamente unido al dominio, sigue estos pasos:&#xA;Verifica el Estado del Cliente en el Dominio:</description>
     </item>
     <item>
       <title>Dynamic Host Configuration Protocol (DHCP)</title>
       <link>http://localhost:1313/post/dhcp/</link>
       <pubDate>Sun, 18 Aug 2024 11:18:17 -0600</pubDate>
       <guid>http://localhost:1313/post/dhcp/</guid>
-      <description></description>
+      <description>Instructivo para la Configuración de DHCP El Dynamic Host Configuration Protocol (DHCP) es un protocolo de red que automatiza la asignación de direcciones IP y otros parámetros de configuración a dispositivos en una red.</description>
     </item>
     <item>
       <title>Active directory and DNS</title>
       <link>http://localhost:1313/post/active_directory/</link>
       <pubDate>Sun, 18 Aug 2024 11:17:53 -0600</pubDate>
       <guid>http://localhost:1313/post/active_directory/</guid>
-      <description></description>
+      <description>Guía de Configuración: Active Directory Domain Services y DNS Active Directory Domain Services (AD DS) y DNS (Domain Name System) son componentes clave en la gestión de redes.</description>
     </item>
     <item>
       <title>Windows 10 Pro</title>
