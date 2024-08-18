@@ -2,11 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/post/ca/</loc>
+    <lastmod>2024-08-18T11:21:22-06:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-08-15T14:06:04-06:00</lastmod>
+    <lastmod>2024-08-18T11:21:22-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-08-15T14:06:04-06:00</lastmod>
+    <lastmod>2024-08-18T11:21:22-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/web_server/</loc>
+    <lastmod>2024-08-18T11:20:51-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/dfs/</loc>
+    <lastmod>2024-08-18T11:20:33-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/fsrm/</loc>
+    <lastmod>2024-08-18T11:20:21-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/shared_files/</loc>
+    <lastmod>2024-08-18T11:20:02-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/group_policies/</loc>
+    <lastmod>2024-08-18T11:19:30-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/users_and_groups/</loc>
+    <lastmod>2024-08-18T11:19:04-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/client_domain/</loc>
+    <lastmod>2024-08-18T11:18:37-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/dhcp/</loc>
+    <lastmod>2024-08-18T11:18:17-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/active_directory/</loc>
+    <lastmod>2024-08-18T11:17:53-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/windows_10pro/</loc>
+    <lastmod>2024-08-18T10:35:29-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/windows_server/</loc>
+    <lastmod>2024-08-18T10:35:12-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/tarjeta_virtual/</loc>
+    <lastmod>2024-08-15T14:26:00-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/config/</loc>
+    <lastmod>2024-08-15T11:58:00-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/teconologias/</loc>
     <lastmod>2024-08-15T11:58:00-06:00</lastmod>

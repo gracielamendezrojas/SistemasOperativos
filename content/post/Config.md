@@ -2,7 +2,7 @@
 title = 'Configuración de la red'
 date = 2024-08-15T11:58:00-06:00
 draft = false
-image = "/images/Vmware_workstation.png"
+image = "/images/red.jpg"
 +++
 
 En esta página se proporciona una descripción de la configuración general para el desarrollo de un proyecto de red. 
@@ -10,12 +10,11 @@ En esta página se proporciona una descripción de la configuración general par
 ## Configuración General
 
 - **Direccionamiento:**
-  - **Network ID:** 192.168.1.0 (Clase C)
+  - **Network:** 192.168.1.0 (Clase C)
   - **Máscara:** 255.255.255.0
-  - **Gateway (para prueba de salida a Internet):** 192.168.1.1
-  - **Domain Controller (Estática):** 192.168.1.10
+  - **Gateway:** 192.168.1.1
+  - **Rango DHCP:** 192.168.1.10 - 192.168.1.245
   - **DNS:** 192.168.1.10
-  - **Cliente W10 (Estática; para prueba):** 192.168.1.20
 
 - **Virtualizador:** VMware Workstation Pro
 - **Cliente:** Windows 10 Pro

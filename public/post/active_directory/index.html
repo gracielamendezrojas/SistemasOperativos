@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/fav/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/fav/logo.png">
+    <link rel="manifest" href="/images/fav/site.webmanifest">
+    <title>Documentación para la Virtualización</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head><body><header>
+    <div class="logo">
+        <a href="http://localhost:1313/">
+            <img src="/images/logo.png" alt="Site Logo">
+
+        </a>
+    </div>
+    <nav>
+        <ul>
+        </ul>
+    </nav>
+</header>
+
+
+
+<section class="hero"
+    style='background-image: url("/images/AD.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;'
+    id="heroSection" onload="adjustTextColor(this)">
+    <div>
+        <h1 id="textOverlay">Active directory and DNS</h1>
+    </div>
+</section>
+<main class="post">
+    
+</main>
+<script>
+    function adjustTextColor(sectionId) {
+        const section = document.getElementById(sectionId);
+        const style = window.getComputedStyle(section);
+        const imageUrl = style.backgroundImage.slice(4, -1).replace(/["']/g, "");
+        const image = new Image();
+        image.src = imageUrl;
+        image.onload = function () {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = image.width;
+            canvas.height = image.height;
+            context.drawImage(image, 0, 0, image.width, image.height);
+            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            let r = 0, g = 0, b = 0;
+            for (let i = 0; i < data.length; i += 4) {
+                r += data[i];
+                g += data[i + 1];
+                b += data[i + 2];
+            }
+            r /= (data.length / 4);
+            g /= (data.length / 4);
+            b /= (data.length / 4);
+            const brightness = Math.sqrt(0.299 * r * r + 0.587 * g * g + 0.114 * b * b);
+            const textColor = brightness > 128 ? 'black' : 'white';
+            const shadowColor = brightness > 128 ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+            const textOverlay = document.getElementById('textOverlay');
+            textOverlay.style.color = textColor;
+            textOverlay.style.textShadow = `0 0 5px ${shadowColor}, 0 0 10px ${shadowColor}, 0 0 20px ${shadowColor}, 0 0 40px ${shadowColor}, 0 0 80px ${shadowColor}, 0 0 90px ${shadowColor}, 0 0 100px ${shadowColor}, 0 0 150px ${shadowColor}`;
+        };
+    }
+    
+    adjustTextColor('heroSection');
+</script>
+<footer>
+    <div class="social-media">
+        
+    </div>
+    <div class="logo">
+        <a href="http://localhost:1313/">
+            <img src="/images/logo.png" alt="Site Logo">
+        </a>
+        <p>&copy; 2024 Documentación para la Virtualización</p>
+    </div>
+    <nav>
+        <ul>
+        </ul>
+    </nav>
+    <script>
+    window.store = {
+    
+    
+    "http:\/\/localhost:1313\/post\/ca\/": {
+        
+        "title": "Certificate Authority",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/ca\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/": {
+        
+        "title": "Documentación para la Virtualización",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/": {
+        
+        "title": "Posts",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/web_server\/": {
+        
+        "title": "Web server",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/web_server\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/dfs\/": {
+        
+        "title": "Distributed File System (DFS)",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/dfs\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/fsrm\/": {
+        
+        "title": "File Server Resource Manager (FSRM)",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/fsrm\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/shared_files\/": {
+        
+        "title": "Carpetas compartidas",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/shared_files\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/group_policies\/": {
+        
+        "title": "Políticas de grupo",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/group_policies\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/users_and_groups\/": {
+        
+        "title": "Creación de usuarios y grupos",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/users_and_groups\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/client_domain\/": {
+        
+        "title": "Unión de cliente al dominio",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/client_domain\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/dhcp\/": {
+        
+        "title": "Dynamic Host Configuration Protocol (DHCP)",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/dhcp\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/active_directory\/": {
+        
+        "title": "Active directory and DNS",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/post\/active_directory\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/windows_10pro\/": {
+        
+        "title": "Windows 10 Pro",
+            "tags": [],
+    "content": "Instalación de Windows 10 Pro La instalación del cliente Windows se realiza de manera similar, utilizando VMware WorkStation como virtualizador. En este caso, se ha seleccionado Windows 10 Pro para permitir la edición de conexiones de dominio, función disponible en esta versión.\nInterfaz de Windows 10 Pro: Al igual que con el servidor, es necesario desactivar el firewall durante la configuración:\nFirewall desactivado: Se asignan direcciones IP temporalmente, como se muestra en la siguiente figura:\nConfiguración de IP temporal: Para verificar la conexión a Internet, se utiliza el símbolo del sistema con el comando ping y la dirección IP previamente establecida. La imagen muestra la prueba de conexión para Windows Server:\nPrueba de conexión: ", 
+    "url": "http:\/\/localhost:1313\/post\/windows_10pro\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/windows_server\/": {
+        
+        "title": "Windows Server 2019",
+            "tags": [],
+    "content": "Instalación de Windows Server 2019 La versión seleccionada para Windows Server es la 2019. Esta se ha instalado utilizando el virtualizador VMware WorkStation. Después de cargar la imagen del sistema y completar los pasos correspondientes, se accede a la pantalla del Server Manager, que se muestra en la siguiente figura:\nServer Manager en Windows Server 2019: Antes de comenzar con los procesos relacionados con DNS y DHCP, se configuraron los valores de IP y DNS, como se muestra en la siguiente figura:\nConfiguración de IP temporal: Como parte del procedimiento, es necesario desactivar el firewall de la computadora para configurar ciertos parámetros. Esto se refleja en la figura a continuación:\nFirewall desactivado ", 
+    "url": "http:\/\/localhost:1313\/post\/windows_server\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/tarjeta_virtual\/": {
+        
+        "title": "Tarjeta virtual",
+            "tags": [],
+    "content": "Uno de los primeros pasos en la configuración de una máquina virtual es la configuración de la tarjeta de red virtual. Dos de los detalles más importantes a considerar son la subnet IP y la subnet mask, que definen la red en la que se encuentra la máquina virtual.\nSubnet IP: Define una red específica en la que se encuentra la máquina virtual. Subnet Mask: Se utiliza para dividir la dirección IP en dos partes: la parte de la red y la parte del host. Red de la máquina virtual: Ejemplo del default Gateway: En la figura anterior, el Gateway IP actúa como intermediario entre la red interna y la externa. Esto permite que la máquina virtual se comunique con otras redes, incluyendo la red de Internet.\n", 
+    "url": "http:\/\/localhost:1313\/post\/tarjeta_virtual\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/config\/": {
+        
+        "title": "Configuración de la red",
+            "tags": [],
+    "content": "En esta página se proporciona una descripción de la configuración general para el desarrollo de un proyecto de red.\nConfiguración General Direccionamiento:\nNetwork: 192.168.1.0 (Clase C) Máscara: 255.255.255.0 Gateway: 192.168.1.1 Rango DHCP: 192.168.1.10 - 192.168.1.245 DNS: 192.168.1.10 Virtualizador: VMware Workstation Pro\nCliente: Windows 10 Pro\nDomain Controller: Windows Server 2019\nDominio: grupo1.clienSO.org\nDSRM Password: Cenfotec123!\nNetBIOS: GRUPO1\n", 
+    "url": "http:\/\/localhost:1313\/post\/config\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/post\/teconologias\/": {
+        
+        "title": "Tecnologías utilizadas",
+            "tags": [],
+    "content": "En esta sección se resume la información de las tecnologías que se utilizaron como parte de la virtualización.\nVirtualizador: VMWare Workstation Pro VMware Workstation Pro es un potente virtualizador que ofrece diversas funcionalidades esenciales, ideal para pruebas y desarrollo de aplicaciones, educación, formación, evaluación de software y pruebas de seguridad. A diferencia de versiones como VMware Workstation Fusion, esta versión no incluye características como snapshots, clones de VM, redes avanzadas o gestión de equipos.\nBeneficios de VMware Workstation Pro Uso Gratuito: Recientemente, VMware ha habilitado el uso gratuito para usuarios, permitiendo el acceso a sus funcionalidades sin costo. Versatilidad: Permite ejecutar diferentes sistemas operativos en un mismo equipo, facilitando el desarrollo y las pruebas. Interfaz Intuitiva: Su interfaz es bastante intuitiva y relativamente fácil de usar, reduciendo la curva de aprendizaje. Entornos Aislados: Proporciona la capacidad de trabajar en entornos aislados, minimizando el riesgo de infectar el sistema operativo principal con malware. Máquinas Virtuales Windows Server 2019:\nUso: Conexión con servicios de Azure, creación de aplicaciones en la nube, modernización con contenedores. Características: Windows Defender Advanced, compatibilidad con Kubernetes, interfaz de usuario mejorada. Windows 10 Pro:\nUso: Gestión de recursos compartidos en empresas medianas y pequeñas. Características: Bitlocker, integración con la nube (Azure Active Directory), Enterprise Data Protection, Remote Desktop. ", 
+    "url": "http:\/\/localhost:1313\/post\/teconologias\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/categories\/": {
+        
+        "title": "Categories",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/categories\/"
+        },
+    
+    
+    "http:\/\/localhost:1313\/tags\/": {
+        
+        "title": "Tags",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/localhost:1313\/tags\/"
+        },
+    
+    }
+</script>
+
+<script src="/js/lunr.min.js"></script>
+<script src="/js/search.js"></script>
+
+</footer>
+</body>
+</html>
