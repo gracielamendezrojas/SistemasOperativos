@@ -1,6 +1,6 @@
 # Theme config. Your config (yoursite/hugo.toml) overrides this one.
 theme = "quint"
-relativeURLs = true 
+baseURL = 'https://gracielamendezrojas.github.io/SistemasOperativos/'
 languageCode = 'en-us'
 title = 'Documentación para la Virtualización'
 
