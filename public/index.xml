@@ -27,14 +27,14 @@
       <link>http://localhost:1313/post/dfs/</link>
       <pubDate>Sun, 18 Aug 2024 11:20:33 -0600</pubDate>
       <guid>http://localhost:1313/post/dfs/</guid>
-      <description></description>
+      <description>Implementación de DFS (Distributed File System) DFS es una tecnología que permite agrupar varios recursos compartidos en diferentes servidores en un solo sistema de archivos lógico.</description>
     </item>
     <item>
       <title>File Server Resource Manager (FSRM)</title>
       <link>http://localhost:1313/post/fsrm/</link>
       <pubDate>Sun, 18 Aug 2024 11:20:21 -0600</pubDate>
       <guid>http://localhost:1313/post/fsrm/</guid>
-      <description></description>
+      <description>Funcionalidades de File Server Resource Manager El File Server Resource Manager permite establecer límites de espacio en disco para carpetas o volúmenes, controlando el uso del almacenamiento.</description>
     </item>
     <item>
       <title>Carpetas compartidas</title>
