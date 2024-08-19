@@ -1,6 +1,5 @@
 # Theme config. Your config (yoursite/hugo.toml) overrides this one.
 theme = "quint"
-baseURL = '/'
 relativeURLs = true 
 languageCode = 'en-us'
 title = 'Documentación para la Virtualización'
