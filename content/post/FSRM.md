@@ -2,7 +2,7 @@
 title = 'File Server Resource Manager (FSRM)'
 date = 2024-08-18T11:20:21-06:00
 draft = false
-image = "/images/FSRM.jpg"
+image = "/SistemasOperativos/images/FSRM.jpg"
 +++
 ## Funcionalidades de File Server Resource Manager
 
@@ -28,11 +28,11 @@ Para crear cuotas, se debe navegar desde **Server Manager** -> **Tools** -> **Fi
 
 ### **Creación de cuotas:**
 
-![Creación de cuotas](/images/Quotas.png)
+![Creación de cuotas](/SistemasOperativos/images/Quotas.png)
 
 Por otro lado, para limitar la inclusión de archivos a ciertas carpetas, se puede crear una plantilla y aplicarla a diversos folders. Para ello, se debe navegar hasta el **File Screening Manager** (**Server Manager** -> **Tools** -> **File Server Resource Manager** -> **Quota Resource Manager** -> **File Screening Manager**) y hacer clic en **Create File Screening**. Para el template, se debe especificar el nombre y los archivos que se van a bloquear en el folder seleccionado.
 
 ### **Creación de template para bloquear archivos AVI y MP3:**
 
-![Creación de template para bloquear archivos AVI y MP3](/images/Restriction.png)
+![Creación de template para bloquear archivos AVI y MP3](/SistemasOperativos/images/Restriction.png)
 

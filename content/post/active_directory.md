@@ -2,7 +2,7 @@
 title = 'Active directory and DNS'
 date = 2024-08-18T11:17:53-06:00
 draft = false
-image = "/images/AD.jpg"
+image = "/SistemasOperativos/images/AD.jpg"
 +++
 
 # Guía de Configuración: Active Directory Domain Services y DNS
@@ -42,24 +42,24 @@ image = "/images/AD.jpg"
    - Selecciona **"Add Roles and Features"** y sigue el procedimiento para instalar **Active Directory Domain Services** y **DNS**.
 
     **Instalación de Active Directory y DNS:**
-   ![Instalación de Active Directory y DNS](/images/AD1.png)
+   ![Instalación de Active Directory y DNS](/SistemasOperativos/images/AD1.png)
 
     **Selección de características AD DS:**
-   ![Selección de características AD DS](/images/AD2.png)
+   ![Selección de características AD DS](/SistemasOperativos/images/AD2.png)
 
     **Selección de características DNS:**
-   ![Selección de características DNS](/images/AD3.png)
+   ![Selección de características DNS](/SistemasOperativos/images/AD3.png)
 
 2. **Promoción a Domain Controller:**
    - Una vez instalados AD DS y DNS, promueve el servidor a **Domain Controller** presionando el botón correspondiente.
     **Promoción del servidor a Domain Controller:**
-   ![Promoción del servidor a Domain Controller](/images/AD4.png)
+   ![Promoción del servidor a Domain Controller](/SistemasOperativos/images/AD4.png)
 
     **Finalización del proceso de instalación:**
-   ![Finalización del proceso de instalación](/images/AD5.png)
+   ![Finalización del proceso de instalación](/SistemasOperativos/images/AD5.png)
     
     **Ingreso de credenciales como Administrador:**
-   ![Ingreso de credenciales como Administrador](/images/AD6.png)
+   ![Ingreso de credenciales como Administrador](/SistemasOperativos/images/AD6.png)
 
    **Razones para promover el servidor a Domain Controller:**
    - **Autenticación Centralizada:** Permite iniciar sesión una sola vez y acceder a múltiples recursos.
@@ -71,7 +71,7 @@ image = "/images/AD.jpg"
    - En el **DNS Manager**, configura dominios en la sección de **Forward Lookup Zones**.
 
     **DNS Forward Lookup Zones:**]
-   ![DNS Forward Lookup Zones](/images/AD7.png)
+   ![DNS Forward Lookup Zones](/SistemasOperativos/images/AD7.png)
 
    **Forward Lookup Zones incluyen:**
    - **Base de Datos DNS:** Contiene registros que asocian nombres de dominio con direcciones IP.
@@ -86,7 +86,7 @@ image = "/images/AD.jpg"
    - Configura las **Reverse Lookup Zones**, que contienen registros PTR (Pointer) para asociar direcciones IP con nombres de dominio.
 
     **DNS Reverse Lookup Zones:**
-   ![DNS Reverse Lookup Zones](/images/AD8.png)
+   ![DNS Reverse Lookup Zones](/SistemasOperativos/images/AD8.png)
 
    **Funciones de las Reverse Lookup Zones:**
    - **Traducción de IPs a Nombres:** Principal función de búsqueda inversa.
@@ -97,6 +97,6 @@ image = "/images/AD.jpg"
    - Ejecuta **nslookup** en el símbolo del sistema para verificar la conectividad con varios dominios.
 
     **Pruebas de conectividad:**
-   ![Pruebas de conectividad](/images/AD9.png)
+   ![Pruebas de conectividad](/SistemasOperativos/images/AD9.png)
 
 

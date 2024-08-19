@@ -2,7 +2,7 @@
 title = 'Tecnologías utilizadas'
 date = 2024-08-15T11:58:00-06:00
 draft = false
-image = "/images/Vmware_workstation.png"
+image = "/SistemasOperativos/images/Vmware_workstation.png"
 +++
 
 En esta sección se resume la información de las tecnologías que se utilizaron como parte de la virtualización.
@@ -28,4 +28,4 @@ En esta sección se resume la información de las tecnologías que se utilizaron
    - **Características:** Bitlocker, integración con la nube (Azure Active Directory), Enterprise Data Protection, Remote Desktop.
 
 
-![VMWARE and Windows](/images/vmware_windows.png)
+![VMWARE and Windows](/SistemasOperativos/images/vmware_windows.png)

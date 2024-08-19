@@ -2,7 +2,7 @@
 title = 'Creación de usuarios y grupos'
 date = 2024-08-18T11:19:04-06:00
 draft = false
-image = "/images/users.jpg"
+image = "/SistemasOperativos/images/users.jpg"
 +++
 ## Creación de Usuarios y Grupos
 
@@ -23,7 +23,7 @@ Para gestionar usuarios y grupos en el servidor, sigue estos pasos:
      - **Password:** Contraseña del usuario.
 
    **Creación de Usuario**  
-   ![Creación de usuario](/images/UG.png)
+   ![Creación de usuario](/SistemasOperativos/images/UG.png)
 
 ### Creación de Grupos
 
@@ -46,4 +46,4 @@ Para gestionar usuarios y grupos en el servidor, sigue estos pasos:
    - Haz clic en **OK** para completar la asociación.
 
    **Asociación de Usuario a un Grupo**  
-   ![Asociación de usuario a un grupo](/images/UG1.png)
+   ![Asociación de usuario a un grupo](/SistemasOperativos/images/UG1.png)

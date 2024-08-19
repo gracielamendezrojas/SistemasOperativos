@@ -2,7 +2,7 @@
 title = 'Carpetas compartidas'
 date = 2024-08-18T11:20:02-06:00
 draft = false
-image = "/images/shared.jpg"
+image = "/SistemasOperativos/images/shared.jpg"
 +++
 # Carpetas Compartidas
 
@@ -47,21 +47,21 @@ En esta sección se muestran los pasos realizados para cumplir con los diversos 
 
     **Formatear disco local:**
 
-    ![Formatear disco local](/images/formateo.png)
+    ![Formatear disco local](/SistemasOperativos/images/formateo.png)
 
 4. **Compartir la Carpeta y Selección de Permisos**:
    - Ruta para compartir la carpeta: Click derecho sobre la carpeta -> Properties -> Share -> Digitar el grupo -> Add.
 
     **Compartir carpetas:**
 
-    ![Compartir carpetas](/images/Share_G.png)
+    ![Compartir carpetas](/SistemasOperativos/images/Share_G.png)
 
 5. **Ajuste de Permisos de las Carpetas Compartidas**: Una vez que se haya seleccionado el grupo con el que se desea compartir en la sección de permisos, se puede elegir entre las opciones disponibles.
 
     **Ajuste de permisos en carpetas:**
 
-    ![Ajuste de permisos en carpetas](/images/Permission.png)
+    ![Ajuste de permisos en carpetas](/SistemasOperativos/images/Permission.png)
 
     **Carpeta compartida:**
 
-    ![Carpeta compartida](/images/Shared_F.png)
+    ![Carpeta compartida](/SistemasOperativos/images/Shared_F.png)

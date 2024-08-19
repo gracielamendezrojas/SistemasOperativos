@@ -2,7 +2,7 @@
 title = 'Configuración de la red'
 date = 2024-08-15T11:58:00-06:00
 draft = false
-image = "/images/red.jpg"
+image = "/SistemasOperativos/images/red.jpg"
 +++
 
 En esta página se proporciona una descripción de la configuración general para el desarrollo de un proyecto de red. 

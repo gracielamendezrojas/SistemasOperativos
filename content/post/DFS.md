@@ -2,7 +2,7 @@
 title = 'Distributed File System (DFS)'
 date = 2024-08-18T11:20:33-06:00
 draft = false
-image = "/images/DFS.jpg"
+image = "/SistemasOperativos/images/DFS.jpg"
 +++
 # Implementación de DFS (Distributed File System)
 
@@ -22,41 +22,41 @@ A continuación, se describen los pasos realizados para mapear una carpeta perso
 
 1. **Creación de “Namespace” para el Servidor:**
 
-   ![Creación de “Namespace” para el servidor](/images/NS.png)
+   ![Creación de “Namespace” para el servidor](/SistemasOperativos/images/NS.png)
 
 2. **Creación del Nombre de la Carpeta para DFS:**
 
-   ![Creación de nombre de la carpeta para el DFS](/images/DFS2.png)
+   ![Creación de nombre de la carpeta para el DFS](/SistemasOperativos/images/DFS2.png)
 
 3. **Definición de la Ruta de la Carpeta:**
 
-   ![Definición de ruta de la carpeta](/images/F_path.png)
+   ![Definición de ruta de la carpeta](/SistemasOperativos/images/F_path.png)
 
 4. **Creación de Carpetas para DFS y Definición de Rutas:**
 
-   ![Creación de carpetas para DFS y definición de rutas](/images/F_create.png)
+   ![Creación de carpetas para DFS y definición de rutas](/SistemasOperativos/images/F_create.png)
 
 5. **Creación de Carpetas para DFS y Definición de Rutas para Cada Departamento:**
 
-   ![Creación de carpetas para DFS y definición de rutas para cada departamento](/images/F_DEP.png)
+   ![Creación de carpetas para DFS y definición de rutas para cada departamento](/SistemasOperativos/images/F_DEP.png)
 
 6. **Creación de Acceso Directo a las Carpetas con la Ruta del DFS:**
 
-   ![Creación de acceso directo a las carpetas con la ruta del DFS](/images/Shortcut.png)
+   ![Creación de acceso directo a las carpetas con la ruta del DFS](/SistemasOperativos/images/Shortcut.png)
 
 7. **Creación de Acceso Directo a las Carpetas con la Ruta del DFS para Cada Departamento:**
 
-   ![Creación de acceso directo a las carpetas con la ruta del DFS para cada departamento](/images/Shortcut2.png)
+   ![Creación de acceso directo a las carpetas con la ruta del DFS para cada departamento](/SistemasOperativos/images/Shortcut2.png)
 
 8. **Confirmación de la Ruta de la Carpeta Compartida con DFS:**
 
-   ![Confirmación de ruta de la carpeta compartida con DFS](/images/SF_Confirm.png)
+   ![Confirmación de ruta de la carpeta compartida con DFS](/SistemasOperativos/images/SF_Confirm.png)
 
 9. **Creación de acceso directo a las carpetas con la ruta del DFS:**
-   ![Creación de acceso directo a las carpetas con la ruta del DFS](/images/Direct_Access.png)
+   ![Creación de acceso directo a las carpetas con la ruta del DFS](/SistemasOperativos/images/Direct_Access.png)
 
 10. **Comprobación de la Carpeta en el Cliente:**
 
-   ![Comprobación de carpeta en el cliente](/images/SF_Access.png)
+   ![Comprobación de carpeta en el cliente](/SistemasOperativos/images/SF_Access.png)
 
 Estos pasos aseguran que cada usuario pueda acceder a sus carpetas personales de manera eficiente y segura a través del sistema DFS. 
