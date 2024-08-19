@@ -3,8 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/fav/logo1.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/fav/logo1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/fav/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/fav/logo.png">
     <link rel="manifest" href="/images/fav/site.webmanifest">
     <title>Documentación para la Virtualización</title>
     <link rel="stylesheet" href="/css/styles.css">
@@ -12,7 +12,7 @@
 </head><body><header>
     <div class="logo">
         <a href="http://localhost:1313/">
-            <img src="/images/logo1.png" alt="Site Logo">
+            <img src="/images/logo.png" alt="Site Logo">
 
         </a>
     </div>
@@ -22,29 +22,126 @@
     </nav>
 </header>
 
-    <section class="hero">
-        <h1>Categories</h1>
-        <form id="search"
-    action='http://localhost:1313/search/' method="get" class="form-inline">
-    <label hidden for="search-input">Search site</label>
-    <input type="text" id="search-input" name="query"
-    placeholder="Type here to search">
-    <button type="submit" value="search">Search</button>
-</form>
 
-    </section>
-    <main>
-        <p></p>
-        <ul>
-            
-            <div class="blog-cards">
+
+<section class="hero"
+    style='background-image: url("/images/shared.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;'
+    id="heroSection" onload="adjustTextColor(this)">
+    <div>
+        <h1 id="textOverlay">Carpetas compartidas</h1>
+    </div>
+</section>
+<main class="post">
+    <h1 id="carpetas-compartidas">Carpetas Compartidas</h1>
+<p>Las carpetas compartidas son directorios disponibles en una red, lo que permite el acceso a las carpetas desde diversos dispositivos. Es común que existan carpetas compartidas para el uso de diversos usuarios o departamentos. A continuación se muestra una tabla con las carpetas compartidas y el tipo de permisos asignados a cada departamento.</p>
+<h2 id="carpetas-compartidas-de-los-departamentos-y-especificación-de-los-permisos">Carpetas compartidas de los departamentos y especificación de los permisos</h2>
+<table>
+<thead>
+<tr>
+<th>Carpeta Compartida</th>
+<th>Permiso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ventas</td>
+<td>El departamento de ventas tiene permiso de lectura y escritura.</td>
+</tr>
+<tr>
+<td>Contabilidad</td>
+<td>El departamento de contabilidad tiene permiso de lectura y escritura.</td>
+</tr>
+<tr>
+<td>RH</td>
+<td>El departamento de recursos humanos tiene permiso de lectura y escritura.</td>
+</tr>
+<tr>
+<td>TI</td>
+<td>El departamento de tecnologías de información tiene permiso de lectura y escritura.</td>
+</tr>
+<tr>
+<td>Gerencia</td>
+<td>El departamento de gerencia tiene permiso de lectura y escritura.</td>
+</tr>
+<tr>
+<td>Pública</td>
+<td>Todos los departamentos tienen permiso de lectura y solamente TI tiene permiso de escritura.</td>
+</tr>
+</tbody>
+</table>
+<p>Previo a compartir las carpetas, se instaló el rol de servidor de archivos (File Server Role) en Windows Server, el cual es esencial para una gestión efectiva y avanzada de archivos en una red.</p>
+<p><strong>Comando para instalar el servidor de archivos:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Install-WindowsFeature -Name FS-FileServer
+</span></span></code></pre></div><p>En esta sección se muestran los pasos realizados para cumplir con los diversos requerimientos solicitados referentes a las carpetas compartidas.</p>
+<h3 id="carpetas-compartidas-creadas-en-el-disco-d">Carpetas Compartidas Creadas en el Disco D:</h3>
+<ol>
+<li>
+<p><strong>Cambio del Tamaño de la Partición del Disco</strong>: Para la práctica realizada, el tamaño del disco C consumía todo el espacio de la memoria del disco duro. Por lo tanto, fue necesario reducir el tamaño del disco con el comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Resize-Partition -DiskNumber <span style="color:#ae81ff">0</span> -PartitionNumber <span style="color:#ae81ff">3</span> -Size <span style="color:#ae81ff">29</span>GB
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Creación del Disco D</strong>: El comando utilizado para la creación del disco D fue el siguiente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-Partition <span style="color:#960050;background-color:#1e0010">–</span>DiskNumber <span style="color:#ae81ff">0</span> -Size <span style="color:#ae81ff">20</span>GB -DriveLetter D
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Formatear el Disco D</strong>: Para el uso del disco D, primero debe ser formateado.</p>
+<p><strong>Formatear disco local:</strong></p>
+<p><img src="/images/formateo.png" alt="Formatear disco local"></p>
+</li>
+<li>
+<p><strong>Compartir la Carpeta y Selección de Permisos</strong>:</p>
+<ul>
+<li>Ruta para compartir la carpeta: Click derecho sobre la carpeta -&gt; Properties -&gt; Share -&gt; Digitar el grupo -&gt; Add.</li>
+</ul>
+<p><strong>Compartir carpetas:</strong></p>
+<p><img src="/images/Share_G.png" alt="Compartir carpetas"></p>
+</li>
+<li>
+<p><strong>Ajuste de Permisos de las Carpetas Compartidas</strong>: Una vez que se haya seleccionado el grupo con el que se desea compartir en la sección de permisos, se puede elegir entre las opciones disponibles.</p>
+<p><strong>Ajuste de permisos en carpetas:</strong></p>
+<p><img src="/images/Permission.png" alt="Ajuste de permisos en carpetas"></p>
+<p><strong>Carpeta compartida:</strong></p>
+<p><img src="/images/Shared_F.png" alt="Carpeta compartida"></p>
+</li>
+</ol>
+
+</main>
+<script>
+    function adjustTextColor(sectionId) {
+        const section = document.getElementById(sectionId);
+        const style = window.getComputedStyle(section);
+        const imageUrl = style.backgroundImage.slice(4, -1).replace(/["']/g, "");
+        const image = new Image();
+        image.src = imageUrl;
+        image.onload = function () {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = image.width;
+            canvas.height = image.height;
+            context.drawImage(image, 0, 0, image.width, image.height);
+            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            let r = 0, g = 0, b = 0;
+            for (let i = 0; i < data.length; i += 4) {
+                r += data[i];
+                g += data[i + 1];
+                b += data[i + 2];
+            }
+            r /= (data.length / 4);
+            g /= (data.length / 4);
+            b /= (data.length / 4);
+            const brightness = Math.sqrt(0.299 * r * r + 0.587 * g * g + 0.114 * b * b);
+            const textColor = brightness > 128 ? 'black' : 'white';
+            const shadowColor = brightness > 128 ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+            const textOverlay = document.getElementById('textOverlay');
+            textOverlay.style.color = textColor;
+            textOverlay.style.textShadow = `0 0 5px ${shadowColor}, 0 0 10px ${shadowColor}, 0 0 20px ${shadowColor}, 0 0 40px ${shadowColor}, 0 0 80px ${shadowColor}, 0 0 90px ${shadowColor}, 0 0 100px ${shadowColor}, 0 0 150px ${shadowColor}`;
+        };
+    }
     
-</div>
-
-            
-            
-        </main>
-    <footer>
+    adjustTextColor('heroSection');
+</script>
+<footer>
     <div class="social-media">
         
     </div>
@@ -111,7 +208,7 @@
         
         "title": "Distributed File System (DFS)",
             "tags": [],
-    "content": "", 
+    "content": "Implementación de DFS (Distributed File System) DFS es una tecnología que permite agrupar varios recursos compartidos en diferentes servidores en un solo sistema de archivos lógico. Esto permite que diferentes usuarios accedan a archivos y carpetas desde múltiples servidores de manera sencilla y eficiente. Aquí se presentan dos razones clave por las que una empresa podría utilizar DFS:\nAlmacenar datos de forma permanente en soportes de almacenamiento secundario. Compartir información de manera fácil, eficiente y segura. Componentes Críticos del DFS Transparencia de la Ubicación: Permite que los usuarios vean un solo espacio de almacenamiento para los archivos de datos, independientemente del computador desde el que se conecten. Redundancia: Extiende copias de un archivo a través de los nodos de un clúster, asegurando la disponibilidad y protección de los datos. Pasos para el Mapeo de Carpetas Personales con DFS A continuación, se describen los pasos realizados para mapear una carpeta personal para cada usuario utilizando DFS. Las siguientes figuras ilustran cada paso:\nCreación de “Namespace” para el Servidor:\nCreación del Nombre de la Carpeta para DFS:\nDefinición de la Ruta de la Carpeta:\nCreación de Carpetas para DFS y Definición de Rutas:\nCreación de Carpetas para DFS y Definición de Rutas para Cada Departamento:\nCreación de Acceso Directo a las Carpetas con la Ruta del DFS:\nCreación de Acceso Directo a las Carpetas con la Ruta del DFS para Cada Departamento:\nConfirmación de la Ruta de la Carpeta Compartida con DFS:\nCreación de acceso directo a las carpetas con la ruta del DFS: Comprobación de la Carpeta en el Cliente:\nEstos pasos aseguran que cada usuario pueda acceder a sus carpetas personales de manera eficiente y segura a través del sistema DFS.\n", 
     "url": "http:\/\/localhost:1313\/post\/dfs\/"
         },
     
@@ -120,7 +217,7 @@
         
         "title": "File Server Resource Manager (FSRM)",
             "tags": [],
-    "content": "", 
+    "content": "Funcionalidades de File Server Resource Manager El File Server Resource Manager permite establecer límites de espacio en disco para carpetas o volúmenes, controlando el uso del almacenamiento. También tiene la capacidad de crear y aplicar reglas para organizar y gestionar los archivos basados en su contenido. Para instalar el File Server Resource Manager, se debe correr el siguiente comando:\nInstall-WindowsFeature FS-Resource-Manager -IncludeManagementTools Respecto a las cuotas de las diversas carpetas compartidas, se define el tamaño en la siguiente tabla.\nDefinición del tamaño de las cuotas para las carpetas compartidas de los departamentos: Carpeta compartida Tamaño (MB) Ventas 10 Contabilidad 20 RH 30 TI 40 Gerencia 50 Para crear cuotas, se debe navegar desde Server Manager -\u0026gt; Tools -\u0026gt; File Server Resource Manager -\u0026gt; Quota Resource Manager -\u0026gt; Create Quota y definir las características de la cuota, como la ruta de la carpeta de la cuota y su tamaño.\nCreación de cuotas: Por otro lado, para limitar la inclusión de archivos a ciertas carpetas, se puede crear una plantilla y aplicarla a diversos folders. Para ello, se debe navegar hasta el File Screening Manager (Server Manager -\u0026gt; Tools -\u0026gt; File Server Resource Manager -\u0026gt; Quota Resource Manager -\u0026gt; File Screening Manager) y hacer clic en Create File Screening. Para el template, se debe especificar el nombre y los archivos que se van a bloquear en el folder seleccionado.\nCreación de template para bloquear archivos AVI y MP3: ", 
     "url": "http:\/\/localhost:1313\/post\/fsrm\/"
         },
     
@@ -129,7 +226,7 @@
         
         "title": "Carpetas compartidas",
             "tags": [],
-    "content": "", 
+    "content": "Carpetas Compartidas Las carpetas compartidas son directorios disponibles en una red, lo que permite el acceso a las carpetas desde diversos dispositivos. Es común que existan carpetas compartidas para el uso de diversos usuarios o departamentos. A continuación se muestra una tabla con las carpetas compartidas y el tipo de permisos asignados a cada departamento.\nCarpetas compartidas de los departamentos y especificación de los permisos Carpeta Compartida Permiso Ventas El departamento de ventas tiene permiso de lectura y escritura. Contabilidad El departamento de contabilidad tiene permiso de lectura y escritura. RH El departamento de recursos humanos tiene permiso de lectura y escritura. TI El departamento de tecnologías de información tiene permiso de lectura y escritura. Gerencia El departamento de gerencia tiene permiso de lectura y escritura. Pública Todos los departamentos tienen permiso de lectura y solamente TI tiene permiso de escritura. Previo a compartir las carpetas, se instaló el rol de servidor de archivos (File Server Role) en Windows Server, el cual es esencial para una gestión efectiva y avanzada de archivos en una red.\nComando para instalar el servidor de archivos:\nInstall-WindowsFeature -Name FS-FileServer En esta sección se muestran los pasos realizados para cumplir con los diversos requerimientos solicitados referentes a las carpetas compartidas.\nCarpetas Compartidas Creadas en el Disco D: Cambio del Tamaño de la Partición del Disco: Para la práctica realizada, el tamaño del disco C consumía todo el espacio de la memoria del disco duro. Por lo tanto, fue necesario reducir el tamaño del disco con el comando:\nResize-Partition -DiskNumber 0 -PartitionNumber 3 -Size 29GB Creación del Disco D: El comando utilizado para la creación del disco D fue el siguiente:\nNew-Partition –DiskNumber 0 -Size 20GB -DriveLetter D Formatear el Disco D: Para el uso del disco D, primero debe ser formateado.\nFormatear disco local:\nCompartir la Carpeta y Selección de Permisos:\nRuta para compartir la carpeta: Click derecho sobre la carpeta -\u0026gt; Properties -\u0026gt; Share -\u0026gt; Digitar el grupo -\u0026gt; Add. Compartir carpetas:\nAjuste de Permisos de las Carpetas Compartidas: Una vez que se haya seleccionado el grupo con el que se desea compartir en la sección de permisos, se puede elegir entre las opciones disponibles.\nAjuste de permisos en carpetas:\nCarpeta compartida:\n", 
     "url": "http:\/\/localhost:1313\/post\/shared_files\/"
         },
     
@@ -138,119 +235,7 @@
         
         "title": "Políticas de grupo",
             "tags": [],
-    "content": "", 
-    "url": "http:\/\/localhost:1313\/post\/group_policies\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/post\/users_and_groups\/": {
-        
-        "title": "Creación de usuarios y grupos",
-            "tags": [],
-    "content": "", 
-    "url": "http:\/\/localhost:1313\/post\/users_and_groups\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/post\/client_domain\/": {
-        
-        "title": "Unión de cliente al dominio",
-            "tags": [],
-    "content": "", 
-    "url": "http:\/\/localhost:1313\/post\/client_domain\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/post\/dhcp\/": {
-        
-        "title": "Dynamic Host Configuration Protocol (DHCP)",
-            "tags": [],
-    "content": "", 
-    "url": "http:\/\/localhost:1313\/post\/dhcp\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/post\/active_directory\/": {
-        
-        "title": "Active directory and DNS",
-            "tags": [],
-    "content": "", 
-    "url": "http:\/\/localhost:1313\/post\/active_directory\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/post\/windows_10pro\/": {
-        
-        "title": "Windows 10 Pro",
-            "tags": [],
-    "content": "Instalación de Windows 10 Pro La instalación del cliente Windows se realiza de manera similar, utilizando VMware WorkStation como virtualizador. En este caso, se ha seleccionado Windows 10 Pro para permitir la edición de conexiones de dominio, función disponible en esta versión.\nInterfaz de Windows 10 Pro: Al igual que con el servidor, es necesario desactivar el firewall durante la configuración:\nFirewall desactivado: Se asignan direcciones IP temporalmente, como se muestra en la siguiente figura:\nConfiguración de IP temporal: Para verificar la conexión a Internet, se utiliza el símbolo del sistema con el comando ping y la dirección IP previamente establecida. La imagen muestra la prueba de conexión para Windows Server:\nPrueba de conexión: ", 
-    "url": "http:\/\/localhost:1313\/post\/windows_10pro\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/post\/windows_server\/": {
-        
-        "title": "Windows Server 2019",
-            "tags": [],
-    "content": "Instalación de Windows Server 2019 La versión seleccionada para Windows Server es la 2019. Esta se ha instalado utilizando el virtualizador VMware WorkStation. Después de cargar la imagen del sistema y completar los pasos correspondientes, se accede a la pantalla del Server Manager, que se muestra en la siguiente figura:\nServer Manager en Windows Server 2019: Antes de comenzar con los procesos relacionados con DNS y DHCP, se configuraron los valores de IP y DNS, como se muestra en la siguiente figura:\nConfiguración de IP temporal: Como parte del procedimiento, es necesario desactivar el firewall de la computadora para configurar ciertos parámetros. Esto se refleja en la figura a continuación:\nFirewall desactivado ", 
-    "url": "http:\/\/localhost:1313\/post\/windows_server\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/post\/tarjeta_virtual\/": {
-        
-        "title": "Tarjeta virtual",
-            "tags": [],
-    "content": "Uno de los primeros pasos en la configuración de una máquina virtual es la configuración de la tarjeta de red virtual. Dos de los detalles más importantes a considerar son la subnet IP y la subnet mask, que definen la red en la que se encuentra la máquina virtual.\nSubnet IP: Define una red específica en la que se encuentra la máquina virtual. Subnet Mask: Se utiliza para dividir la dirección IP en dos partes: la parte de la red y la parte del host. Red de la máquina virtual: Ejemplo del default Gateway: En la figura anterior, el Gateway IP actúa como intermediario entre la red interna y la externa. Esto permite que la máquina virtual se comunique con otras redes, incluyendo la red de Internet.\n", 
-    "url": "http:\/\/localhost:1313\/post\/tarjeta_virtual\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/post\/config\/": {
-        
-        "title": "Configuración de la red",
-            "tags": [],
-    "content": "En esta página se proporciona una descripción de la configuración general para el desarrollo de un proyecto de red.\nConfiguración General Direccionamiento:\nNetwork: 192.168.1.0 (Clase C) Máscara: 255.255.255.0 Gateway: 192.168.1.1 Rango DHCP: 192.168.1.10 - 192.168.1.245 DNS: 192.168.1.10 Virtualizador: VMware Workstation Pro\nCliente: Windows 10 Pro\nDomain Controller: Windows Server 2019\nDominio: grupo1.clienSO.org\nDSRM Password: Cenfotec123!\nNetBIOS: GRUPO1\n", 
-    "url": "http:\/\/localhost:1313\/post\/config\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/post\/teconologias\/": {
-        
-        "title": "Tecnologías utilizadas",
-            "tags": [],
-    "content": "En esta sección se resume la información de las tecnologías que se utilizaron como parte de la virtualización.\nVirtualizador: VMWare Workstation Pro VMware Workstation Pro es un potente virtualizador que ofrece diversas funcionalidades esenciales, ideal para pruebas y desarrollo de aplicaciones, educación, formación, evaluación de software y pruebas de seguridad. A diferencia de versiones como VMware Workstation Fusion, esta versión no incluye características como snapshots, clones de VM, redes avanzadas o gestión de equipos.\nBeneficios de VMware Workstation Pro Uso Gratuito: Recientemente, VMware ha habilitado el uso gratuito para usuarios, permitiendo el acceso a sus funcionalidades sin costo. Versatilidad: Permite ejecutar diferentes sistemas operativos en un mismo equipo, facilitando el desarrollo y las pruebas. Interfaz Intuitiva: Su interfaz es bastante intuitiva y relativamente fácil de usar, reduciendo la curva de aprendizaje. Entornos Aislados: Proporciona la capacidad de trabajar en entornos aislados, minimizando el riesgo de infectar el sistema operativo principal con malware. Máquinas Virtuales Windows Server 2019:\nUso: Conexión con servicios de Azure, creación de aplicaciones en la nube, modernización con contenedores. Características: Windows Defender Advanced, compatibilidad con Kubernetes, interfaz de usuario mejorada. Windows 10 Pro:\nUso: Gestión de recursos compartidos en empresas medianas y pequeñas. Características: Bitlocker, integración con la nube (Azure Active Directory), Enterprise Data Protection, Remote Desktop. ", 
-    "url": "http:\/\/localhost:1313\/post\/teconologias\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/categories\/": {
-        
-        "title": "Categories",
-            "tags": [],
-    "content": "", 
-    "url": "http:\/\/localhost:1313\/categories\/"
-        },
-    
-    
-    "http:\/\/localhost:1313\/tags\/": {
-        
-        "title": "Tags",
-            "tags": [],
-    "content": "", 
-    "url": "http:\/\/localhost:1313\/tags\/"
-        },
-    
-    }
-</script>
-
-<script src="/js/lunr.min.js"></script>
-<script src="/js/search.js"></script>
-
-</footer>
-</body>
-</html>
-ios autenticados. Dentro de esta carpeta se encuentra el archivo FondoEmpresarial.jpg. Archivo de Fondo de Pantalla Empresarial en la Carpeta\nConfiguración de la Política de Grupo:\nSe creó una nueva política de grupo llamada “Fondo de Pantalla”. Se configuró para que utilice la dirección de la carpeta y el archivo FondoEmpresarial.jpg como fondo de pantalla para todos los usuarios. Ubicación de la Configuración de la Política de Grupo\nDefinición de Carpeta y Archivo del Fondo de Pantalla\n2. Deshabilitar Acceso al Panel de Control y Ejecutables Deshabilitar el Acceso al Panel de Control:\nSe creó una política de grupo para deshabilitar el acceso al Panel de Control para usuarios no pertenecientes al grupo de TI. Activación de la Política de Grupo\nExclusión de Usuarios del Grupo de TI\nDeshabilitar Ejecutables:\nPara bloquear la ejecución de notepad.exe y regedit.exe, se configuró la política de grupo correspondiente. Ubicación de la Configuración de la Política de Grupo\nEspecificación de los Programas Deshabilitados\nDefinir Página de Inicio en Internet Explorer: Se estableció una página web específica para que se cargue al iniciar Internet Explorer. Definición de Página Web por Defecto\n3. Renombrar Usuarios Locales Renombramiento del Usuario Administrador Local:\nEl nombre del usuario administrador local se cambió a usrmda. Renombramiento del Administrador Local\nConfirmación de Renombramiento\n4. Redirección de Carpetas Configuración de la Redirección de Carpetas:\nSe configuró la política de grupo para redirigir las carpetas de los usuarios del dominio a una carpeta de red específica. Definición de Ruta para Redirección de Carpetas\nConfiguración de las Propiedades de los Documentos\nConfirmación de Redirección de Carpeta\n5. Restricción de Archivos Restricción de Copia de Archivos:\nSe implementó una política para prevenir la copia de archivos con extensiones .MP3 y .AVI a las carpetas de la empresa. Configuración de Restricción de Archivos\n", 
+    "content": "Implementación de Políticas de Grupo Dado que la empresa no tiene experiencia en la creación de políticas de grupo, se solicitaron las siguientes políticas para su implementación:\nCambiar el fondo de pantalla a uno corporativo (archivo compartido en el servidor denominado FondoEmpresarial.jpg). Deshabilitar el acceso al Panel de Control para usuarios que no pertenecen al departamento de TI. Definir una página inicial específica para Internet Explorer. Deshabilitar la ejecución de ciertos ejecutables: notepad.exe y regedit.exe. Mapear un recurso de red usando DFS para uso personal, asignando la unidad P: a cada usuario de dominio y accediendo a la carpeta personal mediante una ruta DFS. Renombrar los usuarios locales: cambiar el nombre del administrador local a usrmda y el nombre del usuario invitado local a usrtmp en las estaciones. Configurar la redirección de carpetas para los usuarios del dominio a una carpeta de red. A continuación se detalla cómo se configuraron estas políticas y sus resultados:\n1. Cambiar Fondo de Pantalla Configuración del Archivo de Fondo de Pantalla:\nSe creó una carpeta compartida en el servidor llamada “Fondo de Pantalla Empresarial”, accesible para todos los usuarios autenticados. Dentro de esta carpeta se encuentra el archivo FondoEmpresarial.jpg. Archivo de Fondo de Pantalla Empresarial en la Carpeta\nConfiguración de la Política de Grupo:\nSe creó una nueva política de grupo llamada “Fondo de Pantalla”. Se configuró para que utilice la dirección de la carpeta y el archivo FondoEmpresarial.jpg como fondo de pantalla para todos los usuarios. Ubicación de la Configuración de la Política de Grupo\nDefinición de Carpeta y Archivo del Fondo de Pantalla\n2. Deshabilitar Acceso al Panel de Control y Ejecutables Deshabilitar el Acceso al Panel de Control:\nSe creó una política de grupo para deshabilitar el acceso al Panel de Control para usuarios no pertenecientes al grupo de TI. Activación de la Política de Grupo\nExclusión de Usuarios del Grupo de TI\nDeshabilitar Ejecutables:\nPara bloquear la ejecución de notepad.exe y regedit.exe, se configuró la política de grupo correspondiente. Ubicación de la Configuración de la Política de Grupo\nEspecificación de los Programas Deshabilitados\nDefinir Página de Inicio en Internet Explorer: Se estableció una página web específica para que se cargue al iniciar Internet Explorer. Definición de Página Web por Defecto\n3. Renombrar Usuarios Locales Renombramiento del Usuario Administrador Local:\nEl nombre del usuario administrador local se cambió a usrmda. Renombramiento del Administrador Local\nConfirmación de Renombramiento\n4. Redirección de Carpetas Configuración de la Redirección de Carpetas:\nSe configuró la política de grupo para redirigir las carpetas de los usuarios del dominio a una carpeta de red específica. Definición de Ruta para Redirección de Carpetas\nConfiguración de las Propiedades de los Documentos\nConfirmación de Redirección de Carpeta\n5. Restricción de Archivos Restricción de Copia de Archivos:\nSe implementó una política para prevenir la copia de archivos con extensiones .MP3 y .AVI a las carpetas de la empresa. Configuración de Restricción de Archivos\n", 
     "url": "http:\/\/localhost:1313\/post\/group_policies\/"
         },
     

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Documentación para la Virtualización</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on Documentación para la Virtualización</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Aug 2024 11:21:22 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certificate Authority</title>
+      <link>http://localhost:1313/post/ca/</link>
+      <pubDate>Sun, 18 Aug 2024 11:21:22 -0600</pubDate>
+      <guid>http://localhost:1313/post/ca/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web server</title>
+      <link>http://localhost:1313/post/web_server/</link>
+      <pubDate>Sun, 18 Aug 2024 11:20:51 -0600</pubDate>
+      <guid>http://localhost:1313/post/web_server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed File System (DFS)</title>
+      <link>http://localhost:1313/post/dfs/</link>
+      <pubDate>Sun, 18 Aug 2024 11:20:33 -0600</pubDate>
+      <guid>http://localhost:1313/post/dfs/</guid>
+      <description>Implementación de DFS (Distributed File System) DFS es una tecnología que permite agrupar varios recursos compartidos en diferentes servidores en un solo sistema de archivos lógico.</description>
+    </item>
+    <item>
+      <title>File Server Resource Manager (FSRM)</title>
+      <link>http://localhost:1313/post/fsrm/</link>
+      <pubDate>Sun, 18 Aug 2024 11:20:21 -0600</pubDate>
+      <guid>http://localhost:1313/post/fsrm/</guid>
+      <description>Funcionalidades de File Server Resource Manager El File Server Resource Manager permite establecer límites de espacio en disco para carpetas o volúmenes, controlando el uso del almacenamiento.</description>
+    </item>
+    <item>
+      <title>Carpetas compartidas</title>
+      <link>http://localhost:1313/post/shared_files/</link>
+      <pubDate>Sun, 18 Aug 2024 11:20:02 -0600</pubDate>
+      <guid>http://localhost:1313/post/shared_files/</guid>
+      <description>Carpetas Compartidas Las carpetas compartidas son directorios disponibles en una red, lo que permite el acceso a las carpetas desde diversos dispositivos.</description>
+    </item>
+    <item>
+      <title>Políticas de grupo</title>
+      <link>http://localhost:1313/post/group_policies/</link>
+      <pubDate>Sun, 18 Aug 2024 11:19:30 -0600</pubDate>
+      <guid>http://localhost:1313/post/group_policies/</guid>
+      <description>Implementación de Políticas de Grupo Dado que la empresa no tiene experiencia en la creación de políticas de grupo, se solicitaron las siguientes políticas para su implementación:</description>
+    </item>
+    <item>
+      <title>Creación de usuarios y grupos</title>
+      <link>http://localhost:1313/post/users_and_groups/</link>
+      <pubDate>Sun, 18 Aug 2024 11:19:04 -0600</pubDate>
+      <guid>http://localhost:1313/post/users_and_groups/</guid>
+      <description>Creación de Usuarios y Grupos Para gestionar usuarios y grupos en el servidor, sigue estos pasos:&#xA;Creación de Usuarios Accede a la Herramienta de Administración:</description>
+    </item>
+    <item>
+      <title>Unión de cliente al dominio</title>
+      <link>http://localhost:1313/post/client_domain/</link>
+      <pubDate>Sun, 18 Aug 2024 11:18:37 -0600</pubDate>
+      <guid>http://localhost:1313/post/client_domain/</guid>
+      <description>Unión de Cliente al Dominio Para asegurar que el cliente esté correctamente unido al dominio, sigue estos pasos:&#xA;Verifica el Estado del Cliente en el Dominio:</description>
+    </item>
+    <item>
+      <title>Dynamic Host Configuration Protocol (DHCP)</title>
+      <link>http://localhost:1313/post/dhcp/</link>
+      <pubDate>Sun, 18 Aug 2024 11:18:17 -0600</pubDate>
+      <guid>http://localhost:1313/post/dhcp/</guid>
+      <description>Instructivo para la Configuración de DHCP El Dynamic Host Configuration Protocol (DHCP) es un protocolo de red que automatiza la asignación de direcciones IP y otros parámetros de configuración a dispositivos en una red.</description>
+    </item>
+    <item>
+      <title>Active directory and DNS</title>
+      <link>http://localhost:1313/post/active_directory/</link>
+      <pubDate>Sun, 18 Aug 2024 11:17:53 -0600</pubDate>
+      <guid>http://localhost:1313/post/active_directory/</guid>
+      <description>Guía de Configuración: Active Directory Domain Services y DNS Active Directory Domain Services (AD DS) y DNS (Domain Name System) son componentes clave en la gestión de redes.</description>
+    </item>
+    <item>
+      <title>Windows 10 Pro</title>
+      <link>http://localhost:1313/post/windows_10pro/</link>
+      <pubDate>Sun, 18 Aug 2024 10:35:29 -0600</pubDate>
+      <guid>http://localhost:1313/post/windows_10pro/</guid>
+      <description>Instalación de Windows 10 Pro La instalación del cliente Windows se realiza de manera similar, utilizando VMware WorkStation como virtualizador. En este caso, se ha seleccionado Windows 10 Pro para permitir la edición de conexiones de dominio, función disponible en esta versión.</description>
+    </item>
+    <item>
+      <title>Windows Server 2019</title>
+      <link>http://localhost:1313/post/windows_server/</link>
+      <pubDate>Sun, 18 Aug 2024 10:35:12 -0600</pubDate>
+      <guid>http://localhost:1313/post/windows_server/</guid>
+      <description>Instalación de Windows Server 2019 La versión seleccionada para Windows Server es la 2019. Esta se ha instalado utilizando el virtualizador VMware WorkStation.</description>
+    </item>
+    <item>
+      <title>Tarjeta virtual</title>
+      <link>http://localhost:1313/post/tarjeta_virtual/</link>
+      <pubDate>Thu, 15 Aug 2024 14:26:00 -0600</pubDate>
+      <guid>http://localhost:1313/post/tarjeta_virtual/</guid>
+      <description>Uno de los primeros pasos en la configuración de una máquina virtual es la configuración de la tarjeta de red virtual.</description>
+    </item>
+    <item>
+      <title>Configuración de la red</title>
+      <link>http://localhost:1313/post/config/</link>
+      <pubDate>Thu, 15 Aug 2024 11:58:00 -0600</pubDate>
+      <guid>http://localhost:1313/post/config/</guid>
+      <description>En esta página se proporciona una descripción de la configuración general para el desarrollo de un proyecto de red.&#xA;Configuración General Direccionamiento:</description>
+    </item>
+    <item>
+      <title>Tecnologías utilizadas</title>
+      <link>http://localhost:1313/post/teconologias/</link>
+      <pubDate>Thu, 15 Aug 2024 11:58:00 -0600</pubDate>
+      <guid>http://localhost:1313/post/teconologias/</guid>
+      <description>En esta sección se resume la información de las tecnologías que se utilizaron como parte de la virtualización.&#xA;Virtualizador: VMWare Workstation Pro VMware Workstation Pro es un potente virtualizador que ofrece diversas funcionalidades esenciales, ideal para pruebas y desarrollo de aplicaciones, educación, formación, evaluación de software y pruebas de seguridad.</description>
+    </item>
+  </channel>
+</rss>
