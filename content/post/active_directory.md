@@ -11,7 +11,7 @@ image = "/SistemasOperativos/images/AD.jpg"
 
 **Active Directory Domain Services (AD DS)** y **DNS (Domain Name System)** son componentes clave en la gestión de redes. Ambos trabajan en conjunto para facilitar la organización y el acceso a los recursos de red.
 
-- **Active Directory Domain Services** utiliza DNS para permitir que los clientes localicen y se comuniquen con los controladores de dominio (Iainfoulds, 2023).
+- **Active Directory Domain Services** utiliza DNS para permitir que los clientes localicen y se comuniquen con los controladores de dominio.
 - **DNS** simplifica las búsquedas al reemplazar las direcciones IP numéricas por nombres de dominio legibles.
 
 ## DNS (Domain Name System)
