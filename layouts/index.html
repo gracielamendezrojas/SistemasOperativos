@@ -13,7 +13,7 @@
         {{ if gt $paginator.TotalPages 1 }}
             <div class="pagination">
                 {{ if $paginator.HasPrev }}
-                    <a href="{{ $paginator.Prev.URL }}">before</a>
+                    <a href="{{ $paginator.Prev.URL }}">Previo</a>
                 {{ else }}
                     <p></p>
                 {{ end }}
@@ -23,7 +23,7 @@
                     {{ end }}
                 </div>
                 {{ if $paginator.HasNext }}
-                    <a href="{{ $paginator.Next.URL }}">more</a>
+                    <a href="{{ $paginator.Next.URL }}">Más</a>
                 {{ else }}
                     <p></p>
                 {{ end }}

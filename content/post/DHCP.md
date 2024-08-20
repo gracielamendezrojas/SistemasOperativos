@@ -1,4 +1,5 @@
 +++
+weight = 7
 title = 'Dynamic Host Configuration Protocol (DHCP)'
 date = 2024-08-18T11:18:17-06:00
 draft = false

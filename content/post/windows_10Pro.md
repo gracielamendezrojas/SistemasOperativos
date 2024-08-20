@@ -1,4 +1,5 @@
 +++
+weight = 3
 title = 'Windows 10 Pro'
 date = 2024-08-18T10:35:29-06:00
 draft = false

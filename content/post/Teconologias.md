@@ -1,4 +1,5 @@
 +++
+weight = 1
 title = 'Tecnologías utilizadas'
 date = 2024-08-15T11:58:00-06:00
 draft = false
