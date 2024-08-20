@@ -48,7 +48,7 @@ En esta sección se muestran los pasos realizados para cumplir con los diversos 
 
     **Formatear disco local:**
 
-    ![Formatear disco local](/SistemasOperativos/images/formateo.png)
+    ![Formatear disco local](/SistemasOperativos/images/Formateo.png)
 
 4. **Compartir la Carpeta y Selección de Permisos**:
    - Ruta para compartir la carpeta: Click derecho sobre la carpeta -> Properties -> Share -> Digitar el grupo -> Add.

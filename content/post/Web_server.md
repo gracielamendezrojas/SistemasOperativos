@@ -7,9 +7,8 @@ image = "/SistemasOperativos/images/web.jpg"
 +++
 # Configuración del Servidor Web (IIS)
 
-Para la parte del **Web Server** utilizando Internet Information Services (IIS), se ha decidido desplegar un proyecto en desarrollo durante este cuatrimestre. El Frontend fue desarrollado en **Angular** y desplegado en IIS, mientras que el API Restful se implementó en **Java Spring Boot**. Este Backend se desplegó mediante **TaskScheduler** en **Windows Server 2022**, ejecutando un archivo `.bat` que contiene el comando para correr el backend.
+Para la parte del **Web Server** utilizando Internet Information Services (IIS), se ha decidido desplegar este proyecto web. El Frontend fue desarrollado en **Angular** y desplegado en IIS, mientras que el API Restful se implementó en **Java Spring Boot**. Este Backend se desplegó mediante **TaskScheduler** en **Windows Server 2022**, ejecutando un archivo `.bat` que contiene el comando para correr el backend.
 
-Dado que estos ambientes no se desplegarán siguiendo todos los estándares requeridos para ambientes productivos, algunas configuraciones como las variables de entorno están contenidas en el usuario `juan` de la VM y otras prácticas no se han seguido con propósitos de producción.
 
 ## Instalación del Rol de Web Server IIS
 
@@ -54,7 +53,8 @@ Dado que estos ambientes no se desplegarán siguiendo todos los estándares requ
 
 1. **Transferencia de archivos:**
    - Una vez construido el directorio `dist` con Angular CLI y transferido al Windows Server 2022 mediante Filezilla, copie los archivos del directorio `dist > browser` a `C:\inetpub\wwwroot`.
-    **Carpeta wwwroot:**
+   
+   **Carpeta wwwroot:**
    ![Carpeta wwwroot](/SistemasOperativos/images/wwwroot.png)
 
 2. **Agregar aplicación en IIS Manager:**

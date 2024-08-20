@@ -15,7 +15,7 @@ Para gestionar usuarios y grupos en el servidor, sigue estos pasos:
    - Ve a **Tools** -> **Server Manager** y selecciona **Active Directory Users and Computers**.
 
 2. **Crear un Nuevo Usuario:**
-   - Navega alcontenedor donde deseas crear el usuario.
+   - Navega al contenedor donde se desea crear el usuario.
    - Haz clic derecho y selecciona **New** -> **User**.
    - Completa los campos requeridos:
      - **First Name:** Nombre del usuario.

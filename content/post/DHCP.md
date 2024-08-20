@@ -23,10 +23,36 @@ El uso de DHCP ofrece varios beneficios clave:
 
 A continuación, se detalla el procedimiento para configurar DHCP. Las siguientes figuras ilustran cada paso del proceso:
 
-1. **Paso 1: Configuración Inicial**  
    **Configuración DHCP paso a paso:**  
    ![Configuración DHCP paso 1](/SistemasOperativos/images/DHCP.png)
 
+```powershell
+# Instalar el rol de DHCP y las herramientas de administración
+Install-WindowsFeature -Name DHCP -IncludeManagementTools 
+
+# Variables
+$ScopeID = "192.168.1.0"
+$SubnetMask = "255.255.255.0"
+$ScopeName = "ServidorDHCP"
+$LeaseDuration = "8.00:00:00"  # 8 días
+
+# Rango de IPs
+$StartRange = "192.168.1.11"
+$EndRange = "192.168.1.244"
+
+# IPs excluidas
+$ExclusionStart1 = "192.168.1.1"
+$ExclusionEnd1 = "192.168.1.10"
+$ExclusionStart2 = "192.168.1.245"
+$ExclusionEnd2 = "192.168.1.255"
+
+# Agregar el ámbito DHCP
+Add-DhcpServerv4Scope -Name $ScopeName -StartRange $StartRange -EndRange $EndRange -SubnetMask $SubnetMask -LeaseDuration $LeaseDuration
+
+# Agregar exclusiones
+Add-DhcpServerv4ExclusionRange -ScopeId $ScopeID -StartRange $ExclusionStart1 -EndRange $ExclusionEnd1
+Add-DhcpServerv4ExclusionRange -ScopeId $ScopeID -StartRange $ExclusionStart2 -EndRange $ExclusionEnd2
+```
 
 ## Verificación de la Instalación
 
@@ -34,4 +60,9 @@ Una vez completada la instalación, ejecuta los comandos en PowerShell para veri
 
 **Resumen del estado del DHCP:**  
 ![Resumen del estado del DHCP](/SistemasOperativos/images/DHCPfinal.png)
+
+
+Para garantizar la asignación adecuada de direcciones IP a los dispositivos de red, se requiere que los clientes estén configurados para recibir una dirección IP dinámica mediante DHCP. Esta configuración permite que el servidor DHCP asigne automáticamente una dirección IP disponible a cada cliente en función de la configuración del ámbito establecido.
+
+Es crucial que todos los dispositivos en la red estén configurados para obtener una dirección IP de forma dinámica para asegurar una gestión eficiente y automatizada de las direcciones IP y evitar conflictos de direcciones en la red.
 

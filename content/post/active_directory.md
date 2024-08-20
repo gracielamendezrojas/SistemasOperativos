@@ -28,13 +28,13 @@ image = "/SistemasOperativos/images/AD.jpg"
 ### Características Clave
 
 - **Gestión de Recursos:** Facilita la gestión de recursos de red como archivos, usuarios, grupos y dispositivos.
-- **Protocolo LDAP:** Utiliza el Protocolo Ligero de Acceso a Directorios (LDAP) para autenticación y gestión de datos.
+- **Protocolo LDAP:** Utiliza el Protocolo Ligero de Acceso a Directorios para autenticación y gestión de datos.
 - **Almacenamiento y Autorización:** Almacena datos en el directorio y autoriza a los usuarios para acceder a ellos.
 - **Comunicación de Aplicaciones:** Ofrece un lenguaje que las aplicaciones necesitan para comunicarse con los servicios de directorio.
 - **Autenticación y Autorización:** Verifica la identidad de usuarios y dispositivos, y determina los permisos y niveles de acceso.
 - **Gestión Centralizada:** Administra cuentas de usuario, contraseñas y políticas de seguridad de forma centralizada.
 - **Políticas de Grupo:** Implementa configuraciones y restricciones en múltiples dispositivos y usuarios simultáneamente.
-- **Estructura Jerárquica:** Organiza los recursos en un árbol jerárquico de dominios, unidades organizativas (OU) y objetos.
+- **Estructura Jerárquica:** Organiza los recursos en un árbol jerárquico de dominios, unidades organizativas y objetos.
 
 ## Configuración en Windows Server
 
